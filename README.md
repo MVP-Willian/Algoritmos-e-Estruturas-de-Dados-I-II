@@ -83,7 +83,7 @@ Ele está organizado em dois diretórios principais:
 │   │   ├── entrada.txt
 │   │   ├── saida.txt
 │   │   └── trab02-aed2.pdf
-│   └── Hash/
+│   ├── Hash/
 │   |   ├── include/
 │   |   |    ├── arquivo.h
 │   |   |    ├── arvore.h
@@ -100,7 +100,7 @@ Ele está organizado em dois diretórios principais:
 │   |   |    ├── teste
 │   |   |    └── vet.c
 │   │   └── notas.txt
-│   └── Grafos/
+│   ├── Grafos/
 │   |   ├── include/
 │   |   |    ├── grafo.h
 │   |   |    └── lista.h
