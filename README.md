@@ -28,24 +28,24 @@ Ele está organizado em dois diretórios principais:
 │   │   ├── teste
 │   │   └── teste.exe
 │   ├── Comparação algoritmos/
-│   |   ├── bin/
-│   |   |    ├── questao01
-│   |   |    ├── questao02
-│   |   |    ├── questao03
-│   |   |    └── questao05
-│   |   ├── include/
-│   |   |    ├── ferramentas.h
-│   |   |    ├── listaEncadea.h
-│   |   |    └── vet.h
-│   |   ├── src/
-│   |   |    ├── ferramentas.c
-│   |   |    ├── grafios.py
-│   |   |    ├── listaEncadeada.c
-│   |   |    ├── questao01.c
-│   |   |    ├── questao02.c
-│   |   |    ├── questao03.c
-│   |   |    ├── questao05.c
-│   |   |    └── vet.c
+│   │   ├── bin/
+│   │   │    ├── questao01
+│   │   │    ├── questao02
+│   │   │    ├── questao03
+│   │   │    └── questao05
+│   │   ├── include/
+│   │   │    ├── ferramentas.h
+│   │   │    ├── listaEncadea.h
+│   │   │    └── vet.h
+│   │   ├── src/
+│   │   │    ├── ferramentas.c
+│   │   │    ├── grafios.py
+│   │   │    ├── listaEncadeada.c
+│   │   │    ├── questao01.c
+│   │   │    ├── questao02.c
+│   │   │    ├── questao03.c
+│   │   │    ├── questao05.c
+│   │   │    └── vet.c
 │   │   ├── Makefile
 │   │   ├── README.md
 │   │   ├── dados_1.csv
@@ -54,27 +54,27 @@ Ele está organizado em dois diretórios principais:
 │   │   ├── dados_5.csv
 │   │   └── trab01-aed2.pdf
 │   ├── Arvores_Avl_Binaria/
-│   |   ├── bin/
-│   |   |    ├── questao01
-│   |   |    ├── questao02
-│   |   |    ├── questao03
-│   |   |    └── questao04
-│   |   ├── include/
-│   |   |    ├── arvore.h
-│   |   |    ├── avl.h
-│   |   |    ├── pacotes.h
-│   |   |    ├── tempo.h
-│   |   |    └── vet.h
-│   |   ├── src/
-│   |   |    ├── arvore.c
-│   |   |    ├── avl.c
-│   |   |    ├── pacotes.c
-│   |   |    ├── questao01.c
-│   |   |    ├── questao02.c
-│   |   |    ├── questao03.c
-│   |   |    ├── questao04.c
-│   |   |    ├── tempo.c
-│   |   |    └── vet.c
+│   │   ├── bin/
+│   │   │    ├── questao01
+│   │   │    ├── questao02
+│   │   │    ├── questao03
+│   │   │    └── questao04
+│   │   ├── include/
+│   │   │    ├── arvore.h
+│   │   │    ├── avl.h
+│   │   │    ├── pacotes.h
+│   │   │    ├── tempo.h
+│   │   │    └── vet.h
+│   │   ├── src/
+│   │   │    ├── arvore.c
+│   │   │    ├── avl.c
+│   │   │    ├── pacotes.c
+│   │   │    ├── questao01.c
+│   │   │    ├── questao02.c
+│   │   │    ├── questao03.c
+│   │   │    ├── questao04.c
+│   │   │    ├── tempo.c
+│   │   │    └── vet.c
 │   │   ├── Makefile
 │   │   ├── README.md
 │   │   ├── dados1_4.csv
@@ -84,33 +84,33 @@ Ele está organizado em dois diretórios principais:
 │   │   ├── saida.txt
 │   │   └── trab02-aed2.pdf
 │   ├── Hash/
-│   |   ├── include/
-│   |   |    ├── arquivo.h
-│   |   |    ├── arvore.h
-│   |   |    ├── hash.h
-│   |   |    ├── listaEncadeada.h
-│   |   |    └── vet.h
-│   |   ├── src/
-│   |   |    ├── alunos
-│   |   |    ├── arquivo.c
-│   |   |    ├── arvore.c
-│   |   |    ├── hash.c
-│   |   |    ├── listaEncadeada.c
-│   |   |    ├── main.c
-│   |   |    ├── teste
-│   |   |    └── vet.c
+│   │   ├── include/
+│   │   │    ├── arquivo.h
+│   │   │    ├── arvore.h
+│   │   │    ├── hash.h
+│   │   │    ├── listaEncadeada.h
+│   │   │    └── vet.h
+│   │   ├── src/
+│   │   │    ├── alunos
+│   │   │    ├── arquivo.c
+│   │   │    ├── arvore.c
+│   │   │    ├── hash.c
+│   │   │    ├── listaEncadeada.c
+│   │   │    ├── main.c
+│   │   │    ├── teste
+│   │   │    └── vet.c
 │   │   └── notas.txt
 │   ├── Grafos/
-│   |   ├── include/
-│   |   |    ├── grafo.h
-│   |   |    └── lista.h
-│   |   ├── src/
-│   |   |    ├── exemplo_main.c
-│   |   |    ├── grafo.c
-│   |   |    ├── lista.c
-│   |   |    ├── main_questao04.c
-│   |   |    ├── main_questao05.c
-│   |   |    └── main_questao123.c
+│   │   ├── include/
+│   │   │    ├── grafo.h
+│   │   │    └── lista.h
+│   │   ├── src/
+│   │   │    ├── exemplo_main.c
+│   │   │    ├── grafo.c
+│   │   │    ├── lista.c
+│   │   │    ├── main_questao04.c
+│   │   │    ├── main_questao05.c
+│   │   │    └── main_questao123.c
 │   │   ├── tempos_bfs.csv
 │   │   ├── tempos_dfs.csv
 └   └   └── trab4_aed2.pdf
