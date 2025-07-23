@@ -84,8 +84,8 @@ int main(){
         printf("O tempo da busca na lista encadeada foi %f segundos\n", tempoTotal_lista);
         
         //Escrevendo no arquivo
-        fprintf(arquivo, "Lista:       %d,         %f,         %d,         %d\n", i, tempoTotal_vetor, indice1, valorAleatorio);
-        fprintf(arquivo, "Vetor:       %d,         %f,         %d,         %d\n", i, tempoTotal_lista, indice2, valorAleatorio);
+        fprintf(arquivo, "Lista:       %d,         %f,         %d,         %d\n", i, tempoTotal_lista, indice1, valorAleatorio);
+        fprintf(arquivo, "Vetor:       %d,         %f,         %d,         %d\n", i, tempoTotal_vetor, indice2, valorAleatorio);
     }
 
     // Calculando as médias dos tempos no vetor e na lista encadeada
