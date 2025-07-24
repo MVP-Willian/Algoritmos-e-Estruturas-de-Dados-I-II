@@ -1,105 +1,90 @@
-#include "../include/listaEncadeada.h" // Inclusão do cabeçalho da lista encadeada
-#include "../include/vet.h"
-#include "../include/arquivo.h"           // Inclusão do cabeçalho do vetor
-#include <stdlib.h>                    // Para uso de malloc e free
-#include <math.h>                      // Para funções matemáticas
+#include "../include/listaEncadeada.h"  // Inclui o cabeçalho com a definição das estruturas e funções da lista encadeada
+#include "../include/arquivo.h"          // Inclui funções de manipulação de arquivo (caso sejam usadas junto com listas)
+#include <stdlib.h>                      // Para funções de alocação dinâmica (malloc, free)
 
 // Cria e inicializa uma nova lista encadeada
-void criaListaEncadeada(Lista *lista)
-{
-    lista = (Lista *)malloc(sizeof(Lista)); // Aloca memória para a estrutura da lista
-    (lista)->prim = NULL;                   // Inicializa o ponteiro para o primeiro nó como NULL
+Lista* criaListaEncadeada() {
+    Lista* lista = (Lista*) malloc(sizeof(Lista));  // Aloca memória para a estrutura da lista
+    if (lista) {
+        lista->prim = NULL;  // Inicializa o ponteiro para o primeiro elemento como NULL (lista vazia)
+        lista->ult = NULL;   // Inicializa o ponteiro para o último elemento também como NULL
+    }
+    return lista;            // Retorna o ponteiro para a lista criada
 }
 
-// Libera toda a memória alocada para a lista encadeada
-void liberaLista(Lista* lista)
-{
-    TipoNo* atual = lista->prim;
+// Libera toda a memória alocada pela lista encadeada
+void liberaLista(Lista* lista) {
+    TipoNo* atual = lista->prim;  // Começa do primeiro elemento da lista
     TipoNo* aux;
 
-    if (atual == NULL) { return; } // Se a lista estiver vazia, não há o que liberar
-
-    // Percorre a lista liberando os nós um a um
-    while (atual->prox)
-    {
-        aux = atual->prox; // Guarda referência ao próximo nó
-        free(atual);       // Libera o nó atual
-        atual = aux;       // Avança para o próximo
+    // Percorre a lista liberando cada nó
+    while (atual) {
+        aux = atual->prox;   // Salva o próximo nó
+        free(atual);         // Libera o nó atual
+        atual = aux;         // Avança para o próximo nó
     }
 
-    free(atual); // Libera o último nó
-
-    // Reajusta ponteiros da lista para indicar que está vazia
+    // Depois de liberar todos os nós, atualiza os ponteiros da lista
     lista->prim = NULL;
     lista->ult = NULL;
 }
 
+// Remove um elemento da lista com base na chave (atributo)
+int removeLista(Lista *lista, int chave) {
+    TipoNo *aux = lista->prim;      // Ponteiro auxiliar para percorrer a lista
+    TipoNo *anterior = NULL;        // Ponteiro para guardar o nó anterior
 
-
-int removeLista(Lista *lista, int chave){
-    TipoNo *aux = lista->prim;
-    if(aux){
-        if(aux->dado.atributo == chave){
-            lista->prim = aux->prox;
-            free(aux);
-            return 1;
-        }
-        while(aux->prox){
-            if(aux->prox->dado.atributo == chave){
-                aux->prox = aux->prox->prox;
-                free(aux->prox);
-                return 1;
+    // Percorre a lista
+    while (aux) {
+        // Verifica se o nó atual contém a chave a ser removida
+        if (aux->dado.atributo == chave) {
+            if (anterior == NULL) {
+                // Caso o elemento a ser removido seja o primeiro da lista
+                lista->prim = aux->prox;  // Atualiza o primeiro da lista
+                if (lista->prim == NULL) lista->ult = NULL;  // Se a lista ficar vazia, atualiza também o último
+            } else {
+                // Caso o elemento esteja no meio ou no final
+                anterior->prox = aux->prox;  // Remove o nó atual da cadeia
+                if (anterior->prox == NULL) lista->ult = anterior;  // Se era o último, atualiza o ponteiro ult
             }
+            free(aux);  // Libera a memória do nó removido
+            return 1;   // Retorna 1 para indicar que a remoção foi feita com sucesso
         }
+        anterior = aux;   // Avança o ponteiro anterior
+        aux = aux->prox;  // Avança para o próximo nó
     }
-    return 0;
+
+    return 0;  // Retorna 0 se o elemento com a chave não foi encontrado na lista
 }
 
+// Insere um novo elemento ao final da lista encadeada
+void insereNaLista(Lista *lista, TipoDado dadoNovo) {
+    TipoNo *novo = (TipoNo *) malloc(sizeof(TipoNo));  // Aloca um novo nó
+    novo->dado = dadoNovo;   // Copia os dados para o novo nó
+    novo->prox = NULL;       // O próximo do novo nó será NULL (pois será o último da lista)
 
-
-// Insere um novo valor ao final da lista encadeada
-void insereNaLista(Lista *lista, TipoDado dadoNovo)
-{
-    TipoNo *novo = (TipoNo *)malloc(sizeof(TipoNo)); // Cria novo nó
-    novo->dado = dadoNovo; // Atribui o valor
-    novo->prox = NULL;   // Novo nó será o último, então prox é NULL
-
-    TipoNo *aux = lista->ult; // Pega o último nó atual da lista
-    lista->ult = novo;        // Atualiza o último nó para o novo nó
-
-    if (aux == NULL)
-    {
-        // Lista estava vazia: o novo nó é também o primeiro
-        lista->prim = novo;
-        return;
-    }
-
-    aux->prox = novo; // Liga o nó anterior ao novo nó
-}
-
-// Transforma um vetor em uma lista encadeada, inserindo todos os elementos
-/*
-void vetorEmListaEncadeada(Lista *lista, Vetor vetor, int tamanhoVetor)
-{
-    for (int x = 0; x < tamanhoVetor; x++)
-    {
-        insereNaLista(lista, vetor[x]); // Insere cada elemento do vetor na lista
+    if (lista->ult == NULL) {
+        // Caso a lista esteja vazia
+        lista->prim = novo;   // O novo nó passa a ser o primeiro
+        lista->ult = novo;    // E também o último
+    } else {
+        // Caso a lista já tenha elementos
+        lista->ult->prox = novo;  // O último elemento aponta para o novo nó
+        lista->ult = novo;         // Atualiza o ponteiro do último elemento
     }
 }
-*/
 
-// Realiza busca sequencial (linear) na lista encadeada
-int buscaPorIndentificador(Lista *lista, int chave)
-{
-    TipoNo *aux = lista->prim; // Começa pelo primeiro nó da lista
-    while ((aux) && (aux->dado.atributo != chave))
-    {
-        aux = aux->prox;
+// Realiza busca sequencial na lista encadeada por identificador (chave)
+// Também conta o número de colisões (quantidade de nós visitados)
+int buscaPorIdentificador(Lista *lista, int chave, int* colisao) {
+    TipoNo *aux = lista->prim;  // Começa do início da lista
+    while (aux) {
+        (*colisao)++;  // Incrementa o contador de colisões a cada nó visitado
+        if (aux->dado.atributo == chave) {
+            // Se encontrar o elemento, retorna o número de registro armazenado no nó
+            return aux->dado.numeroRegistro;
+        }
+        aux = aux->prox;  // Avança para o próximo nó
     }
-    if (aux)
-    {
-        return aux->dado.numeroRegistro; // Retorna o índice (posição) do valor encontrado
-    }
-
-    return -1; // Valor não encontrado
+    return -1;  // Retorna -1 se o elemento não for encontrado
 }
