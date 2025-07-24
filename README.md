@@ -143,7 +143,49 @@ Abaixo estão descrições técnicas dos algoritmos implementados na pasta `Algo
 
 ✅ **Observação:** Todos os algoritmos estão implementados separadamente em arquivos `.c`, podendo ser compilados com `gcc` ou outro compilador C.
 
+## 📘 Trabalhos de AED II: Aplicações com Tipos Abstratos de Dados (TADs)
 
+A pasta `AED2/` contém trabalhos desenvolvidos durante a disciplina de **Algoritmos e Estruturas de Dados II**, com foco na aplicação prática dos **Tipos Abstratos de Dados (TADs)**.
+
+Cada projeto segue uma organização modular, com os arquivos:
+- `include/`: contém os arquivos `.h` com as definições de estruturas de dados e funções.
+- `src/`: contém os arquivos `.c` com a implementação e os executáveis principais.
+
+---
+
+### 📊 Comparação de Algoritmos (`AED2/Comparação algoritmos/`)
+
+Este diretório reúne experimentos de comparação de desempenho de algoritmos clássicos de busca e ordenação.
+
+#### ✅ Questão 01 - Comparação entre Busca Linear e Busca Binária em Vetores
+- Arquivo: `questao01.c`
+- Objetivo: Comparar os tempos de execução entre busca linear e binária sobre um vetor.
+- Resultados salvos para análise.
+
+#### ✅ Questão 02 - Busca Binária: Lista Encadeada vs Vetor
+- Arquivo: `questao02.c`
+- Objetivo: Comparar o desempenho da busca binária quando aplicada em vetores versus listas encadeadas.
+- Utiliza TADs definidos em `include/listaEncadea.h`.
+
+#### ✅ Questão 03 - Comparação de Algoritmos de Ordenação
+- Arquivo: `questao03.c`
+- Algoritmos testados: Bubble Sort, Selection Sort, Insertion Sort, Quick Sort e Merge Sort.
+- Objetivo: Medir e comparar os tempos de execução com diferentes entradas.
+
+#### 📈 Questão 05 - Geração de Dados e Visualização Gráfica
+- Arquivo: `questao05.c`
+- Objetivo: Gerar dados a partir das ordenações para posterior análise gráfica.
+- Os dados gerados são salvos em arquivos `.csv`.
+
+#### 📊 Visualização com Python
+- Script: `graficos.py`
+- Bibliotecas usadas: `pandas`, `numpy`, `matplotlib`
+- Função: Gerar gráficos com os dados dos arquivos CSV para facilitar a análise visual.
+- Os gráficos resultantes estão disponíveis no relatório `trab01-aed2.pdf`.
+
+---
+
+🧠 **Observação:** Todos os experimentos foram conduzidos respeitando os princípios de modularização com TADs, e o repositório segue uma separação clara entre cabeçalhos (`include/`) e código-fonte (`src/`).
 
 
 
