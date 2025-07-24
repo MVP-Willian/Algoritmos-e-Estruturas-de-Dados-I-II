@@ -3,7 +3,7 @@
 Este repositório reúne materiais, códigos e implementações desenvolvidas durante as disciplinas **Algoritmos e Estruturas de Dados I (AED I)** e **Algoritmos e Estruturas de Dados II (AED II)**.  
 
 Ele está organizado em dois diretórios principais:  
-- **`AED1`**: Contém todos os **algoritmos básicos** estudados em AED I.  
+- **`Algoritmos AED1`**: Contém todos os **algoritmos básicos** estudados em AED I.  
 - **`AED2`**: Contém **trabalhos e projetos** relacionados a estruturas de dados estudadas em AED II.
 
 ---
@@ -114,7 +114,34 @@ Ele está organizado em dois diretórios principais:
 │   │   ├── tempos_bfs.csv
 │   │   ├── tempos_dfs.csv
 └   └   └── trab4_aed2.pdf
+```
 
+## 📊 Detalhes dos Algoritmos de Busca e Ordenação (`Algoritmos AED1`)
+
+Abaixo estão descrições técnicas dos algoritmos implementados na pasta `Algoritmos AED1`, com foco em **complexidade**, **casos de uso ideais** e **características gerais**:
+
+### 🔍 Algoritmos de Busca
+
+| Algoritmo       | Complexidade Melhor Caso | Médio Caso | Pior Caso | Quando Usar |
+|-----------------|--------------------------|------------|-----------|-------------|
+| **Busca Linear** | O(1)                     | O(n)       | O(n)      | Listas pequenas ou não ordenadas. Fácil implementação. |
+| **Busca Binária**| O(1)                     | O(log n)   | O(log n)  | Listas ordenadas. Muito eficiente em buscas sucessivas. |
+
+---
+
+### 🔃 Algoritmos de Ordenação
+
+| Algoritmo        | Melhor Caso | Médio Caso | Pior Caso | Estável | In-place | Quando Usar |
+|------------------|-------------|------------|-----------|---------|----------|-------------|
+| **Bubble Sort**      | O(n)        | O(n²)      | O(n²)     | Sim     | Sim      | Ensino, simplicidade. Pouco eficiente. |
+| **Insertion Sort**   | O(n)        | O(n²)      | O(n²)     | Sim     | Sim      | Listas pequenas ou quase ordenadas. Razoável em prática. |
+| **Selection Sort**   | O(n²)       | O(n²)      | O(n²)     | Não     | Sim      | Pouco uso prático. Simples e previsível. |
+| **Quick Sort**       | O(n log n)  | O(n log n) | O(n²)     | Não     | Sim      | Um dos mais rápidos na prática. Ideal para grandes volumes. |
+| **Merge Sort**       | O(n log n)  | O(n log n) | O(n log n)| Sim     | Não      | Quando estabilidade e desempenho são importantes. |
+
+---
+
+✅ **Observação:** Todos os algoritmos estão implementados separadamente em arquivos `.c`, podendo ser compilados com `gcc` ou outro compilador C.
 
 
 
