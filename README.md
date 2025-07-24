@@ -187,7 +187,7 @@ Este diretório reúne experimentos de comparação de desempenho de algoritmos 
 ---
 ### 🌲 Árvores Binárias e AVL (`AED2/Arvores_Avl_Binaria/`)
 
-#### 🔎 Questão 01 — Caminhamentos em Árvores Binárias  
+#### ✅ Questão 01 — Caminhamentos em Árvores Binárias  
 - Arquivo: `questao01.c`
 - Caminhamentos: **pré-fixado**, **pós-fixado**, **em ordem**.
 
@@ -197,11 +197,11 @@ Este diretório reúne experimentos de comparação de desempenho de algoritmos 
 - Mensagens transmitidas com pacotes desordenados.
 - Reordenação por caminhamento em ordem em uma árvore binária.
 
-#### ⏱️ Questão 03 — Busca Binária: Árvore Binária vs Vetor  
+#### ✅ Questão 03 — Busca Binária: Árvore Binária vs Vetor  
 - Arquivo: `questao03.c`
 - Compara tempo de execução e uso de memória.
 
-#### ⚖️ Questão 04 — Árvores Binárias vs AVL  
+#### ✅ Questão 04 — Árvores Binárias vs AVL  
 - Arquivo: `questao04.c`
 - Compara criação e tempo de busca entre **árvores binárias** e **AVL**.
 - Resultados exportados para `.csv`.
