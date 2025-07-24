@@ -183,6 +183,30 @@ Este diretório reúne experimentos de comparação de desempenho de algoritmos 
 - Função: Gerar gráficos com os dados dos arquivos CSV para facilitar a análise visual.
 - Os gráficos resultantes estão disponíveis no relatório `trab01-aed2.pdf`.
 
+#### 📄 Resultados finais com gráficos: `trab01-aed2.pdf`
+---
+### 🌲 Árvores Binárias e AVL (`AED2/Arvores_Avl_Binaria/`)
+
+#### 🔎 Questão 01 — Caminhamentos em Árvores Binárias  
+- Arquivo: `questao01.c`
+- Caminhamentos: **pré-fixado**, **pós-fixado**, **em ordem**.
+
+#### 💬 Questão 02 — Simulação de Transmissão de Pacotes  
+- Arquivo: `questao02.c`  
+- Entrada: `entrada.txt`, Saída: `saida.txt`
+- Mensagens transmitidas com pacotes desordenados.
+- Reordenação por caminhamento em ordem em uma árvore binária.
+
+#### ⏱️ Questão 03 — Busca Binária: Árvore Binária vs Vetor  
+- Arquivo: `questao03.c`
+- Compara tempo de execução e uso de memória.
+
+#### ⚖️ Questão 04 — Árvores Binárias vs AVL  
+- Arquivo: `questao04.c`
+- Compara criação e tempo de busca entre **árvores binárias** e **AVL**.
+- Resultados exportados para `.csv`.
+
+#### 📄 Resultados finais: `trab02-aed2.pdf`
 ---
 
 🧠 **Observação:** Todos os experimentos foram conduzidos respeitando os princípios de modularização com TADs, e o repositório segue uma separação clara entre cabeçalhos (`include/`) e código-fonte (`src/`).
