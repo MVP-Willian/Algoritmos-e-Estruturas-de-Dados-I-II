@@ -235,6 +235,58 @@ Este diretório contém o terceiro trabalho da disciplina de AED2, focado na imp
 - Todos os dados de desempenho (tempo e comparação de estruturas) foram exportados em arquivos `.csv` disponíveis no diretório.
 - Esses resultados podem ser utilizados para gerar gráficos ou relatórios comparativos.
 ---
+### 📊 Trabalho com Grafos (`AED2/Grafos/`)
+
+Este diretório apresenta o quarto trabalho da disciplina de AED2, com foco em algoritmos de grafos implementados via **matriz de adjacência**, respeitando os princípios dos Tipos Abstratos de Dados (TADs).
+
+
+#### 🔧 Estrutura dos Arquivos
+
+- TADs localizados em: `AED2/Grafos/include/`
+- Executáveis e código-fonte em: `AED2/Grafos/src/`
+- Relatório e visualizações: `AED2/Grafos/trab4-aed2.pdf`
+
+
+#### 🧠 Questões e Funcionalidades
+
+##### ✔️ Questões 1, 2 e 3 — Criação de grafos + buscas BFS e DFS
+
+- Arquivo principal: `main_questao123.c`
+- Geração de grafos com diferentes números de vértices e graus de conectividade.
+- Para cada grafo, são calculados os **tempos de execução** de:
+  - **Busca em Largura (BFS)**
+  - **Busca em Profundidade (DFS)**
+- Visualizações de grafos e suas **matrizes de adjacência** estão no PDF do trabalho.
+- Resultados de tempo em:
+  - `tempos_bfs.csv`
+  - `tempos_dfs.csv`
+
+##### 🔁 Questão 4 — Caminhos que passam por todos os vértices (DFS adaptada)
+
+- Arquivo principal: `main_questao4.c`
+- Realiza uma **DFS modificada** a partir de um vértice aleatório para encontrar todos os caminhos possíveis que percorrem todos os vértices.
+- Testes feitos com grafos de:
+  - 5, 6 e 7 vértices
+  - Graus de conectividade: 40%, 60%, 80%, 100%
+- matrizes de adjacência e representações dos caminhos estão no PDF.
+
+##### 🔄 Questão 5 — Verificação de ciclos de tamanho ≥ 3
+
+- Arquivo principal: `main_questao05.c`
+- Algoritmo que detecta **ciclos com 3 ou mais vértices**.
+- Testes realizados com grafos de:
+  - 10, 20, 50 e 100 vértices
+  - Conectividade de 25%, 40%, 65%, 85%, 100%
+- Resultados do PDF contemplam apenas grafos com 10 e 20 vértices para manter a concisão.
+
+
+#### 📈 Resultados
+
+- Análises de tempo e complexidade estão comentadas no relatório em:
+  - `AED2/Grafos/trab4-aed2.pdf`
+- Arquivos `.csv` organizam os dados experimentais.
+
+---
 🧠 **Observação:** Todos os experimentos foram conduzidos respeitando os princípios de modularização com TADs, e o repositório segue uma separação clara entre cabeçalhos (`include/`) e código-fonte (`src/`).
 
 
