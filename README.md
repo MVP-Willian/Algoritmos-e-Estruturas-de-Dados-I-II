@@ -208,7 +208,33 @@ Este diretório reúne experimentos de comparação de desempenho de algoritmos 
 
 #### 📄 Resultados finais: `trab02-aed2.pdf`
 ---
+### 🧩 Trabalho com Tabelas Hash (`AED2/Hash/`)
 
+Este diretório contém o terceiro trabalho da disciplina de AED2, focado na implementação e análise de desempenho de uma **tabela hash** comparada com outras estruturas de busca em arquivos.
+
+#### 🧪 Implementação e Comparações
+
+- **Arquivo principal**: `main.c`
+  - Implementa uma tabela **hash** para busca por chave em arquivos.
+  - Utiliza **TADs** definidos no diretório `include/`.
+
+#### 🔍 Comparações realizadas:
+
+1. **Busca por chave**:
+   - Comparação de desempenho entre:
+     - Tabela **Hash**
+     - **Busca sequencial** direta em arquivo
+     - **Árvore binária de pesquisa** (que armazena ponteiros para endereços em arquivo)
+
+2. **Busca por intervalo** (ex: buscar todos os elementos maiores ou iguais a uma determinada chave):
+   - Comparação entre:
+     - **Busca sequencial**
+     - **Árvore binária de pesquisa**
+
+#### 📁 Resultados
+- Todos os dados de desempenho (tempo e comparação de estruturas) foram exportados em arquivos `.csv` disponíveis no diretório.
+- Esses resultados podem ser utilizados para gerar gráficos ou relatórios comparativos.
+---
 🧠 **Observação:** Todos os experimentos foram conduzidos respeitando os princípios de modularização com TADs, e o repositório segue uma separação clara entre cabeçalhos (`include/`) e código-fonte (`src/`).
 
 
