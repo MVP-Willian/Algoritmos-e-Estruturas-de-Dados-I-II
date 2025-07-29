@@ -224,7 +224,7 @@ Este diretório contém o terceiro trabalho da disciplina de AED2, focado na imp
    - Comparação de desempenho entre:
      - Tabela **Hash**
      - **Busca sequencial** direta em arquivo
-     - **Árvore binária de pesquisa** (que armazena ponteiros para endereços em arquivo)
+     - **Árvore binária de pesquisa** 
 
 2. **Busca por intervalo** (ex: buscar todos os elementos maiores ou iguais a uma determinada chave):
    - Comparação entre:
